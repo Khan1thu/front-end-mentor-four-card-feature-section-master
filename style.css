@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.title{
+    font-size: 1.2rem;
+    color: hsl(234, 12%, 34%);
+    font-weight: 200;
+    text-align: center;
+}
+
+.title-span{
+    font-weight: 700;
+}
+
+.description{
+    text-align: center;
+    color: hsl(234, 12%, 34%);
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+.card{
+    padding: 20px;
+    border: 0;
+    margin-top: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    border-top: 3px solid hsl(180, 62%, 55%);
+    box-shadow: 0px 0px 10px;
+    width: 250px;
+}
+
+.card-title{
+    font-size: 1.2rem;
+    color: hsl(234, 12%, 34%);
+}
+
+.card-description{
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+.card-svg{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+@media (min-width: 680px) {
+    .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;       
+    }
+}
+
+@media (min-width: 1250px) {
+    .card-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "start mid1 end"
+        "start mid2 end";
+    }
+
+    .supervisor{
+        grid-area: start;
+        align-self: center;
+    }
+
+    .team-builder{
+        grid-area: mid1;
+    }
+
+    .karma{
+        grid-area: mid2;
+    }
+
+    .calculator{
+        grid-area: end;
+        align-self: center;
+    }
+
+}
