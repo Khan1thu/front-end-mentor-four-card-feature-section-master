@@ -71,6 +71,14 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3rem;       
     }
+
+    .title{
+        width: 20rem;
+    }
+    .description{
+        width: 27rem;
+        opacity: 0.5;
+    }
 }
 
 @media (min-width: 1250px) {
